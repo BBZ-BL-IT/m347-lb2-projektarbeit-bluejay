@@ -17,12 +17,10 @@ const port = 4000;
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: "https://nivala.vishalrmahajan.in",
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+  credentials: true,
+}));
 
 //DB config
 connectDB();
