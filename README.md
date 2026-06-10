@@ -15,8 +15,8 @@
 | ✅     | `docker-compose-build.yml`                      | 4 pts  | —          |
 | ✅     | `.env` Dateien (root, Backend, Frontend, Admin) | 2 pts  | —          |
 | ✅     | `INFO.md`                                       | —      | —          |
-| ❌     | Images auf Docker Hub pushen                    | —      | 🔴 Hoch    |
-| ❌     | `docker-compose-hub.yml` erstellen              | 4 pts  | 🔴 Hoch    |
+| ✅     | Images auf Docker Hub pushen                    | —      | 🔴 Hoch    |
+| ✅     | `docker-compose-hub.yml` erstellen              | 4 pts  | 🔴 Hoch    |
 | ❌     | `.devcontainer/devcontainer.json` erstellen     | 5 pts  | 🟡 Mittel  |
 | ❌     | `INFO.md` vervollständigen                      | 2 pts  | 🟡 Mittel  |
 | ❌     | Persistente Daten testen                        | 2 pts  | 🟡 Mittel  |
