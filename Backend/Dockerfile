@@ -7,5 +7,6 @@ FROM node:20-alpine
 WORKDIR /app
 COPY --from=builder /app/node_modules ./node_modules
 COPY . .
+RUN mkdir -p uploads
 EXPOSE 4000
 CMD ["node", "server.js"]
