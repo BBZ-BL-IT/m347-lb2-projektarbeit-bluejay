@@ -1,28 +1,29 @@
 # M347 Projektarbeit — Todo List
+
 **Projekt:** Nivala Food Ordering Website (Containerisierung)
 **Abgabe:** Samstag, 20. Juni 2026, 23:59 Uhr
 
-***
+---
 
 ## Übersicht
 
-| Status | Aufgabe | Punkte | Priorität |
-|--------|---------|--------|-----------|
-| ✅ | Backend `Dockerfile` (multistage) | — | — |
-| ✅ | Frontend `Dockerfile` + `nginx.conf` | — | — |
-| ✅ | Admin `Dockerfile` + `nginx.conf` | — | — |
-| ✅ | `docker-compose-build.yml` | 4 pts | — |
-| ✅ | `.env` Dateien (root, Backend, Frontend, Admin) | 2 pts | — |
-| ✅ | `INFO.md` (begonnen) | — | — |
-| ❌ | Images auf Docker Hub pushen | — | 🔴 Hoch |
-| ❌ | `docker-compose-hub.yml` erstellen | 4 pts | 🔴 Hoch |
-| ❌ | `.devcontainer/devcontainer.json` erstellen | 5 pts | 🟡 Mittel |
-| ❌ | `INFO.md` vervollständigen | 2 pts | 🟡 Mittel |
-| ❌ | Persistente Daten testen | 2 pts | 🟡 Mittel |
-| ❌ | `.env.example` erstellen | — | 🟢 Niedrig |
-| ❌ | Bonus in `INFO.md` dokumentieren | 1 pt | 🟢 Niedrig |
+| Status | Aufgabe                                         | Punkte | Priorität  |
+| ------ | ----------------------------------------------- | ------ | ---------- |
+| ✅     | Backend `Dockerfile` (multistage)               | —      | —          |
+| ✅     | Frontend `Dockerfile` + `nginx.conf`            | —      | —          |
+| ✅     | Admin `Dockerfile` + `nginx.conf`               | —      | —          |
+| ✅     | `docker-compose-build.yml`                      | 4 pts  | —          |
+| ✅     | `.env` Dateien (root, Backend, Frontend, Admin) | 2 pts  | —          |
+| ✅     | `INFO.md`                                       | —      | —          |
+| ❌     | Images auf Docker Hub pushen                    | —      | 🔴 Hoch    |
+| ❌     | `docker-compose-hub.yml` erstellen              | 4 pts  | 🔴 Hoch    |
+| ❌     | `.devcontainer/devcontainer.json` erstellen     | 5 pts  | 🟡 Mittel  |
+| ❌     | `INFO.md` vervollständigen                      | 2 pts  | 🟡 Mittel  |
+| ❌     | Persistente Daten testen                        | 2 pts  | 🟡 Mittel  |
+| ❌     | `.env.example` erstellen                        | —      | 🟢 Niedrig |
+| ❌     | Bonus in `INFO.md` dokumentieren                | 1 pt   | 🟢 Niedrig |
 
-***
+---
 
 ## 🔴 Hoch — Docker Hub (8 Punkte)
 
@@ -94,7 +95,7 @@ networks:
   nivala_net:
 ```
 
-***
+---
 
 ## 🟡 Mittel — Dev Container (5 Punkte)
 
@@ -126,15 +127,15 @@ networks:
 }
 ```
 
-| Extension | Zweck | Pflicht |
-|-----------|-------|---------|
-| `dbaeumer.vscode-eslint` | Linter | ✅ |
-| `esbenp.prettier-vscode` | Prettifier | ✅ |
-| `ms-vscode.js-debug` | Debugger (Breakpoints) | ✅ |
-| `mongodb.mongodb-vscode` | Datenbank-Extension | ✅ |
-| `ms-azuretools.vscode-docker` | Docker-Verwaltung | Optional |
+| Extension                     | Zweck                  | Pflicht  |
+| ----------------------------- | ---------------------- | -------- |
+| `dbaeumer.vscode-eslint`      | Linter                 | ✅       |
+| `esbenp.prettier-vscode`      | Prettifier             | ✅       |
+| `ms-vscode.js-debug`          | Debugger (Breakpoints) | ✅       |
+| `mongodb.mongodb-vscode`      | Datenbank-Extension    | ✅       |
+| `ms-azuretools.vscode-docker` | Docker-Verwaltung      | Optional |
 
-***
+---
 
 ## 🟡 Mittel — Persistente Daten (2 Punkte)
 
@@ -157,24 +158,24 @@ docker compose -f docker-compose-build.yml up
 
 > Der Volume `mongo_data` stellt sicher, dass MongoDB-Daten erhalten bleiben.
 
-***
+---
 
 ## 🟡 Mittel — INFO.md vervollständigen (2 Punkte)
 
 Die `INFO.md` muss folgende Punkte abdecken:
 
-| Thema | Inhalt |
-|-------|--------|
-| Projektbeschreibung | Was ist Nivala? Welche Container? |
-| `docker-compose-build.yml` | Befehl + Erklärung |
-| `docker-compose-hub.yml` | Befehl + Erklärung |
-| Dev Container starten | F1 → "Reopen in Container" |
-| Autoreload | nodemon beobachtet Dateiänderungen |
-| Debugging | Breakpoints via `ms-vscode.js-debug` |
-| Datenbank-Extension | MongoDB for VS Code, Verbindung: `mongodb://admin:secret123@localhost:27017` |
-| Bonus-Container | Admin-Panel: eigener Container, kommuniziert mit Backend |
+| Thema                      | Inhalt                                                                       |
+| -------------------------- | ---------------------------------------------------------------------------- |
+| Projektbeschreibung        | Was ist Nivala? Welche Container?                                            |
+| `docker-compose-build.yml` | Befehl + Erklärung                                                           |
+| `docker-compose-hub.yml`   | Befehl + Erklärung                                                           |
+| Dev Container starten      | F1 → "Reopen in Container"                                                   |
+| Autoreload                 | nodemon beobachtet Dateiänderungen                                           |
+| Debugging                  | Breakpoints via `ms-vscode.js-debug`                                         |
+| Datenbank-Extension        | MongoDB for VS Code, Verbindung: `mongodb://admin:secret123@localhost:27017` |
+| Bonus-Container            | Admin-Panel: eigener Container, kommuniziert mit Backend                     |
 
-***
+---
 
 ## 🟢 Niedrig — `.env.example` (kein Punkt, aber gute Praxis)
 
@@ -189,48 +190,47 @@ FRONTEND_PORT=
 ADMIN_PORT=
 ```
 
-***
+---
 
 ## Bonus (1 Punkt)
 
 Der **Admin-Container** qualifiziert als Bonus-Container:
+
 - Er ist verschieden vom Frontend-Container
 - Er kommuniziert direkt mit dem Backend-Container über die API
 - Muss in `INFO.md` dokumentiert und erklärt werden ✅
 
-***
+---
 
 ## Präsentation — Checkliste
 
-| Demo-Punkt | Vorbereitet |
-|------------|-------------|
-| `docker compose -f docker-compose-hub.yml up` | ❌ |
-| `docker compose -f docker-compose-build.yml up --build` | ❌ |
-| Applikation im Browser zeigen | ❌ |
-| Dockerfile erklären (multistage) | ❌ |
-| Persistente Daten demonstrieren | ❌ |
-| Dev Container starten | ❌ |
-| Autoreload zeigen (Datei speichern → sofort neu laden) | ❌ |
-| Extensions zeigen + begründen | ❌ |
-| Rückblick (2 Min.) | ❌ |
+| Demo-Punkt                                              | Vorbereitet |
+| ------------------------------------------------------- | ----------- |
+| `docker compose -f docker-compose-hub.yml up`           | ❌          |
+| `docker compose -f docker-compose-build.yml up --build` | ❌          |
+| Applikation im Browser zeigen                           | ❌          |
+| Dockerfile erklären (multistage)                        | ❌          |
+| Persistente Daten demonstrieren                         | ❌          |
+| Dev Container starten                                   | ❌          |
+| Autoreload zeigen (Datei speichern → sofort neu laden)  | ❌          |
+| Extensions zeigen + begründen                           | ❌          |
+| Rückblick (2 Min.)                                      | ❌          |
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5835cdbc-29c6-41ae-9d9a-2d143f20c9c2" alt="Food Ordering Website Logo">
 </p>
 
-
-
 https://github.com/user-attachments/assets/b833b686-a4fb-4abb-8b16-9862bce135e4
-
 
 ## About The Project
 
 **Nivala** is a MERN stack food ordering platform that connects customers with the comfort of home-cooked meals. Easily explore a wide selection of homemade food options and get them delivered to your door. **Nivala** emphasizes traditional, authentic meals, offering simplicity and convenience.
 
 Explore Nivala:
+
 - [Customer Portal](https://nivala.vishalrmahajan.in/)
 - [Admin Dashboard](https://nivalaadmin.vishalrmahajan.in/)  
-*(Please wait until the backend wakes up, as it is deployed on Render, which automatically sends it to sleep after 15 minutes of inactivity.)*
+  _(Please wait until the backend wakes up, as it is deployed on Render, which automatically sends it to sleep after 15 minutes of inactivity.)_
 
 ## Built With
 
@@ -245,6 +245,7 @@ Follow these instructions to set up the project locally on your machine.
 ### Prerequisites
 
 Make sure you have the following installed on your system:
+
 - **Node.js** (v14 or later)
 - **npm** or **yarn** (for package management)
 
@@ -255,7 +256,8 @@ Make sure you have the following installed on your system:
    ```bash
    git clone https://github.com/VishalRMahajan/Nivala.git
    cd Nivala
-    ```
+   ```
+
 2. **Install dependencies for the frontend, backend, and admin dashboard**:
    - For Frontend:
      ```bash
@@ -276,18 +278,22 @@ Make sure you have the following installed on your system:
 ### Running the Application
 
 1. **Start the Backend**:
+
    ```bash
    cd Backend
    npm run server
    ```
+
    This will start the backend server on the specified port (default is `http://localhost:4000`).  
    You can change the port from [server.js](https://github.com/VishalRMahajan/Nivala/blob/main/Backend/server.js).
 
 2. **Start the Frontend (Customer Portal)**:
+
    ```bash
    cd Frontend
    npm run dev
    ```
+
    This will start the customer-facing frontend on `http://localhost:5173`.
 
 3. **Start the Admin Dashboard**:
@@ -303,6 +309,7 @@ Each part of the project (Frontend, Backend, Admin) requires its own `.env` file
 
 1. **Backend**:  
    Create a `.env` file in the **Backend** folder with the following variables:
+
    ```
    DB_URI=your_mongo_connection_string
    JWT_SECRET=your_jwt_secret
@@ -310,6 +317,7 @@ Each part of the project (Frontend, Backend, Admin) requires its own `.env` file
 
 2. **Frontend**:  
    Create a `.env` file in the **Frontend** folder with the following variables:
+
    ```
    VITE_BACKEND_URL=http://localhost:4000 or Your Deployed Backend URL
    ```

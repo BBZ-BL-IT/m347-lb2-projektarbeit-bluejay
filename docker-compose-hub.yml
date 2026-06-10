@@ -1,0 +1,46 @@
+services:
+  mongodb:
+    image: mongo:7
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB}
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - nivala_net
+
+  backend:
+    image: hoanvi/nivala-backend:latest
+    ports:
+      - "${BACKEND_PORT}:4000"
+    env_file:
+      - ./Backend/.env
+    depends_on:
+      - mongodb
+    networks:
+      - nivala_net
+
+  frontend:
+    image: hoanvi/nivala-frontend:latest
+    ports:
+      - "${FRONTEND_PORT}:80"
+    depends_on:
+      - backend
+    networks:
+      - nivala_net
+
+  admin:
+    image: hoanvi/nivala-admin:latest
+    ports:
+      - "${ADMIN_PORT}:80"
+    depends_on:
+      - backend
+    networks:
+      - nivala_net
+
+volumes:
+  mongo_data:
+
+networks:
+  nivala_net:
