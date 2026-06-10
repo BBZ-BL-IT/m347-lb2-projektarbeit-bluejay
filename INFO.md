@@ -19,3 +19,7 @@ docker build -t nivala-admin .
 *docker run -p 5174:80 nivala-admin
 
 * = Needs MongoDB to run
+
+### Docker Compose
+
+docker compose -f docker-compose-build.yml up --build
